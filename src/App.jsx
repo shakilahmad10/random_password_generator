@@ -1,33 +1,49 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [upperCase, setUpperCase] = useState(false);
+  const [lowerCase, setLowerCase] = useState(false);
+  const [numbers, setNumbers] = useState(false);
+  const [symbols, setSymbols] = useState(false);
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="passwordBox">
+        <h2>Password Generator</h2>
+        <div className="passwordBoxIn">
+          <input type="text" />
+          <button className='cpyBtn'>COPY</button>
+        </div>
+
+        <div className="passwordLength">
+          <label>Password length</label>
+          <input type="number" max={20} />
+        </div>
+
+        <div className="includeNumber checkBoxSection">
+          <label>Include Numbers</label>
+          <input type="checkbox" checked={numbers} onChange={() => setNumbers(!numbers)} />
+        </div>
+
+        <div className="includeUpperCase checkBoxSection">
+          <label>Include Upper Case</label>
+          <input type="checkbox" checked={upperCase} onChange={() => setUpperCase(!upperCase)} />
+        </div>
+
+        <div className="includeLowerCase checkBoxSection">
+          <label>Include Lower Case</label>
+          <input type="checkbox" checked={lowerCase} onChange={() => setLowerCase(!lowerCase)} />
+        </div>
+
+        <div className="includeSymbols checkBoxSection">
+          <label>Include Symbols</label>
+          <input type="checkbox" checked={symbols} onChange={() => setSymbols(!symbols)} />
+        </div>
+
+        <button className='btn'>Generate Password</button>
+
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }

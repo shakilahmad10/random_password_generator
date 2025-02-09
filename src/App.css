@@ -1,42 +1,69 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body {
+  background-color: slateblue;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+label {
+  font-size: 18px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.passwordBox {
+  width: 350px;
+  padding: 20px;
+  background-color: aliceblue;
 }
 
-.card {
-  padding: 2em;
+.passwordBoxIn {
+  display: flex;
 }
 
-.read-the-docs {
-  color: #888;
+.passwordBoxIn input {
+  flex-basis: 80%;
+  font-size: 20px;
+  padding-left: 5px;
+  background-color: black;
+  color: #fff;
+}
+
+.passwordBox .cpyBtn {
+  flex-basis: 20%;
+  padding: 10px;
+  background-color: yellow;
+  font-weight: 800;
+}
+
+.passwordLength {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+  align-items: center;
+}
+
+.passwordLength input {
+  width: 60px;
+  padding: 6px 0px;
+}
+
+.checkBoxSection {
+  display: flex;
+  padding: 10px 0px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: rgb(243, 194, 60);
+  border-radius: 5px;
 }
